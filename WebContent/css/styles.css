@@ -136,6 +136,7 @@ border: 1px solid #9C9898;
 }
 
 header, footer {
+	margin-top:5px;
 	display: block;
 	min-height: 10%;
 	background: #FC6;
