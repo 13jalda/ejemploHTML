@@ -1,6 +1,6 @@
 <nav> 
  
-  <ul>	
+  <ul class="menu">	
 	<li>
 		<h3>B&aacute;sicos</h3>
 		<ul>

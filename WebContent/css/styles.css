@@ -27,29 +27,8 @@ a{
 	text-decoration:none;
 }
 
-
-
 a:hover{
 	color: orange;
-}
-
-ol, ul {
-	list-style-type: disc;
-}
-
-li{ 
-	margin-bottom:8px;
-}
-
-ol h3, ul h3 {
-	font-weight:bold;
-	margin-bottom:15px;
-}
-
-
-ol ol, ul ul{
-	margin-left:20px;
-	list-style-type: circle;
 }
 
 
@@ -80,6 +59,55 @@ fieldset{
 
 legend{
 	font-weight: bold;
+}
+
+
+
+/*Estilos Menu desplegable*/
+nav{
+   margin: auto;
+   width: 1000px;
+   font-family: Arial, Helvetica;
+   padding: 30px;
+}
+
+ul, ol{
+	slist-style: none;
+}
+
+.menu h3, .menu a, .menu li{
+	background-color: black;
+	color: white;
+	text-decoration: none;	
+	padding: 3px 3px;
+	display: block; 
+}
+
+.menu h3:hover, .menu a:hover, .menu li:hover{
+	background-color: grey; 
+}
+
+.menu > li{
+	float: left;
+}
+
+.menu li ul{
+	display: none;
+	position: absolute;
+	min-width: 140px;
+}
+
+.menu li:hover > ul{
+	display: block;
+}
+
+.menu li ul li{
+	position: relative;
+}
+
+.menu li ul li ul{
+	right: -140px;
+	top:0px;
 }
 
 /*Validaciones formularios
@@ -135,11 +163,18 @@ border: 1px solid #9C9898;
 	flex: 1 6 20%;
 }
 
-header, footer {
+header {
 	margin-top:5px;
 	display: block;
 	min-height: 10%;
 	background: #FC6;
+}
+
+footer {
+	margin-top:5px;
+	display: block;
+	min-height: 10%;
+	background: #BC6;
 }
 
 footer #redes_sociales {
@@ -190,12 +225,7 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td{
 	color:green;	
 }
 
-.cartel{
-	float:left;
-	margin-right:30px;
-	width:250px;
-	height:auto;
-}
+
 
 
 /*
@@ -212,10 +242,7 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td{
 	float: left;
 }
 
-nav{
-   display:         flex;
-   flex-flow: column; /*direccion de los menus, en linea*/
-}
+
 
 /* HOME */
 #home{
@@ -236,11 +263,41 @@ nav{
 	color: orange;
 }
 
+#cartelera li{
+	float:left;
+	width:30%;
+	margin: 0 auto;
+}
+#cartelera li:nth-child(3n+0){
+	margin-right: 0;
+}
+
+#cartelera .cartel{
+	position: relative;
+	  width: 200px;
+	  overflow: auto;
+}	
+
+#cartelera .titulo{
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  min-height: 40px;
+  display: none;
+}
+
+#cartelera .titulo h3{
+	color: #555;
+	text-align: center;
+}
 
 /* CARTELERA_DETALLE */
 #cartelera_detalle h1{
 	color:blue;
 	text-align:left;
+}
+#cartelera .cartel:hover .titulo{
+	display: block;
 }
 
 
@@ -294,6 +351,8 @@ nav{
 }  
 
 
-
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
 
 
